@@ -6,7 +6,7 @@ RUN apt-get install -y python python-dev python-pip
 
 ADD . /app
 
-RUN pip install pprint pywapi
+RUN pip install pprintpp pywapi
 
 EXPOSE 8080
 
