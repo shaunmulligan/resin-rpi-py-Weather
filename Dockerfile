@@ -2,7 +2,7 @@ FROM resin/rpi-buildstep-armv6hf:latest
 
 # Install Python.
 RUN apt-get update
-RUN apt-get install -y python python-dev python-pip libraspberrypi-bin
+RUN apt-get install -y python python-dev python-pip python-pygame libraspberrypi-bin
 
 ADD . /app
 
