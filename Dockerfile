@@ -10,8 +10,9 @@ RUN pip install pprintpp pywapi
 
 EXPOSE 8080
 
-RUN modprobe spi-bcm2708
-RUN modprobe fbtft_device name=pitft verbose=0 rotate=90
-
-RUN echo python app/hello.py > /start
+RUN echo “udevd —daemon” > /start
+RUN echo  "modprobe spi-bcm2708" >> /start
+RUN echo  "modprobe fbtft_device name=pitft verbose=0 rotate=90" >> /start
+RUN echo python app/hello.py >> /start
 RUN chmod +x /start
+
