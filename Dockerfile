@@ -6,7 +6,7 @@ RUN apt-get install -y python python-dev python-pip libraspberrypi-bin
 
 ADD . /app
 
-RUN pip install pprintpp pywapi
+RUN pip install pprintpp pywapi pygame
 
 EXPOSE 8080
 
