@@ -76,11 +76,8 @@ fontpath = pygame.font.match_font('dejavusansmono')
 # set up 2 sizes
 font = pygame.font.Font(fontpath, 20)
 fontSm = pygame.font.Font(fontpath, 18)
- 
-# Inherit from Daemon class
-class MyDaemon(daemon):
-    # implement run method
-    def run(self):
+
+def main(self):
             while True:
                 # retrieve data from weather.com
                 weather_com_result = pywapi.get_weather_from_weather_com(weatherDotComLocationCode)
@@ -180,4 +177,6 @@ class MyDaemon(daemon):
  
                 # Wait
                 time.sleep(updateRate)
-
+    
+if __name__ == '__main__':
+    main()
