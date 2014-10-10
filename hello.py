@@ -14,7 +14,7 @@ import string
 # *** Not to be used for commercial use without permission!
 # if you want to buy the icons for commercial use please send me a note - http://vclouds.deviantart.com/ ***
 print os.getcwd()
-installPath = "./PiTFTWeather/"
+installPath = "/app/PiTFTWeather/"
  
 # location for Lincoln, UK on weather.com
 weatherDotComLocationCode = 'UKXX1087'
