@@ -77,7 +77,7 @@ fontpath = pygame.font.match_font('dejavusansmono')
 font = pygame.font.Font(fontpath, 20)
 fontSm = pygame.font.Font(fontpath, 18)
 
-def main(self):
+def main():
             while True:
                 # retrieve data from weather.com
                 weather_com_result = pywapi.get_weather_from_weather_com(weatherDotComLocationCode)
