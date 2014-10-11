@@ -92,6 +92,7 @@ def main():
                 currPress = weather_com_result['current_conditions']['barometer']['reading'][:-3] + "mb"
                 uv = "UV {}".format(weather_com_result['current_conditions']['uv']['text'])
                 humid = "Hum {}%".format(weather_com_result['current_conditions']['humidity'])
+                city = weather_com_result['location']['name']
  
                 # extract forecast data
                 forecastDays = {}
@@ -134,15 +135,18 @@ def main():
                 text_surface = font.render(today, True, colourWhite)
                 mytft.screen.blit(text_surface, (textAnchorX, textAnchorY))
                 textAnchorY+=textYoffset
+                text_surface = font.render(today, True, colourWhite)
+                mytft.screen.blit(text_surface, (textAnchorX, textAnchorY))
+                textAnchorY+=textYoffset
                 text_surface = font.render(currTemp, True, colourWhite)
                 mytft.screen.blit(text_surface, (textAnchorX, textAnchorY))
                 textAnchorY+=textYoffset
                 text_surface = font.render(currWind, True, colourWhite)
                 mytft.screen.blit(text_surface, (textAnchorX, textAnchorY))
                 textAnchorY+=textYoffset
-                text_surface = font.render(currPress, True, colourWhite)
-                mytft.screen.blit(text_surface, (textAnchorX, textAnchorY))
-                textAnchorY+=textYoffset
+                # text_surface = font.render(currPress, True, colourWhite)
+                # mytft.screen.blit(text_surface, (textAnchorX, textAnchorY))
+                # textAnchorY+=textYoffset
                 text_surface = font.render(uv, True, colourWhite)
                 mytft.screen.blit(text_surface, (textAnchorX, textAnchorY))
                 textAnchorY+=textYoffset
