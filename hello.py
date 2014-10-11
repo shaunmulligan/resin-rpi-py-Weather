@@ -132,7 +132,7 @@ def main():
                 textYoffset = 20
  
                 # add current weather data text artifacts to the screen
-                text_surface = font.render(today, True, colourWhite)
+                text_surface = font.render(city, True, colourWhite)
                 mytft.screen.blit(text_surface, (textAnchorX, textAnchorY))
                 textAnchorY+=textYoffset
                 text_surface = font.render(today, True, colourWhite)
