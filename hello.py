@@ -17,7 +17,7 @@ print os.getcwd()
 installPath = "/app/PiTFTWeather/"
  
 # location for Lincoln, UK on weather.com
-weatherDotComLocationCode = 'USCA0987'#'UKXX1087'
+weatherDotComLocationCode = 'SWXX0031'#'UKXX1087'
 # convert mph = kpd / kphToMph
 kphToMph = 1.60934400061
  
@@ -80,8 +80,8 @@ fontSm = pygame.font.Font(fontpath, 18)
 def main():
             while True:
                 # retrieve data from weather.com
-                locationCode = pywapi.get_location_ids( 'Cape Town' )
-                weather_com_result = pywapi.get_weather_from_weather_com(locationCode)
+                #locationCode = pywapi.get_location_ids( 'Cape Town' )
+                weather_com_result = pywapi.get_weather_from_weather_com(weatherDotComLocationCode)
  
                 # extract current data for today
                 today = weather_com_result['forecasts'][0]['day_of_week'][0:3] + " " \
