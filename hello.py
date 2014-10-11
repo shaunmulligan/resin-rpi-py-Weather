@@ -17,7 +17,7 @@ print os.getcwd()
 installPath = "/app/PiTFTWeather/"
  
 # location for Lincoln, UK on weather.com
-weatherDotComLocationCode = 'UKXX1087'
+weatherDotComLocationCode = '10001'#'UKXX1087'
 # convert mph = kpd / kphToMph
 kphToMph = 1.60934400061
  

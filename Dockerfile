@@ -12,7 +12,7 @@ EXPOSE 8080
 
 RUN echo "udevd --daemon" > /start
 RUN echo  "modprobe spi-bcm2708" >> /start
-RUN echo  "modprobe fbtft_device name=pitft verbose=0 rotate=90" >> /start
+RUN echo  "modprobe fbtft_device name=pitft verbose=0 rotate=270" >> /start
 RUN echo python app/hello.py >> /start
 RUN chmod +x /start
 
