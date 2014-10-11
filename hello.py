@@ -26,7 +26,7 @@ colourWhite = (255, 255, 255)
 colourBlack = (0, 0, 0)
  
 # update interval
-updateRate = 600 # seconds
+updateRate = 60 # seconds
  
 class pitft :
     screen = None;
@@ -80,7 +80,8 @@ fontSm = pygame.font.Font(fontpath, 18)
 def main():
             while True:
                 # retrieve data from weather.com
-                weather_com_result = pywapi.get_weather_from_weather_com(weatherDotComLocationCode)
+                locationCode = pywapi.get_location_ids( 'Cape Town' )
+                weather_com_result = pywapi.get_weather_from_weather_com(locationCode)
  
                 # extract current data for today
                 today = weather_com_result['forecasts'][0]['day_of_week'][0:3] + " " \
